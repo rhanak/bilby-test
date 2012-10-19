@@ -11,3 +11,9 @@ var env = bilby.environment()
 
 env.empty([]) == true;
 env.empty([1, 2, 3]) == false;
+
+var add = bilby.curry(function(a, b) {
+    return a + b;
+});
+add(1)(2) == 3;
+add(1, 2) == 3;
